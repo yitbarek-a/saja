@@ -3,375 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saja General Hospital | Excellence in Healthcare</title>
+    <title>Saja General Hospital</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --primary-color: #0056b3;
-            --secondary-color: #007bff;
-            --accent-color: #28a745;
-            --dark-color: #343a40;
-            --light-color: #f8f9fa;
+            --primary: #10b981;
+            --primary-light: #d1fae5;
+            --secondary: #0f172a;
+            --accent-1: #3b82f6;
+            --accent-1-light: #dbeafe;
+            --accent-2: #f59e0b;
+            --accent-2-light: #fef3c7;
+            --accent-3: #ef4444;
+            --accent-3-light: #fee2e2;
+            --light-bg: #f8fafc;
+            --text-light: #64748b;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #334155;
+            background-color: var(--light-bg);
+            padding: 20px;
         }
-        
-        /* Header Styles */
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        /* Admin/Board Section */
+        .board-section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            padding: 40px 0;
+            margin-bottom: 40px;
         }
-        
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--primary-color) !important;
-        }
-        
-        .nav-link {
-            font-weight: 500;
-            margin: 0 5px;
-        }
-        
-        .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
-        
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 123, 255, 0.8)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0;
+        .admin-member {
+            background: #f1f5f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 24px 18px;
             text-align: center;
-        }
-        
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        /* Services Section */
-        .service-card {
-            border: none;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        /* Doctors Section */
-        .doctor-card {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .doctor-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .doctor-img {
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        /* Testimonials */
-        .testimonial-card {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 20px;
             margin-bottom: 30px;
         }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 50px 0 20px;
+        .admin-photo {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            border: 3px solid #e2e8f0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
         }
-        
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            display: block;
+        .admin-member h4 {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+        .admin-member .text-muted {
+            color: var(--text-light)!important;
+        }
+
+        /* LLMP Section */
+        .llmp-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .llmp-section h2 {
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        .llmp-section .lead {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        .program-component {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            border-left: 4px solid transparent;
+        }
+        .program-component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--primary);
+        }
+        .icon-holder {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        .icon-holder-primary {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+        .icon-holder-accent1 {
+            background-color: var(--accent-1-light);
+            color: var(--accent-1);
+        }
+        .icon-holder-accent2 {
+            background-color: var(--accent-2-light);
+            color: var(--accent-2);
+        }
+        .program-content h5 {
+            color: var(--secondary);
+            font-weight: 600;
             margin-bottom: 10px;
+            font-size: 1.3rem;
         }
-        
-        .footer-links a:hover {
-            color: white;
+        .program-content p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
         }
-        
-        .social-icons a {
-            color: white;
+        .founder-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            height: 100%;
+        }
+        .founder-photo {
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            margin-bottom: 0;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        .founder-info {
+            position: relative;
+            top: -32px; /* Adjust this value for perfect placement */
+            width: 100%;
+            text-align: center;
+            background: rgba(255,255,255,0.85);
+            padding-top: 0.5em;
+        }
+        .founder-name {
+            color: var(--secondary);
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+        }
+        .founder-title {
+            color: var(--text-light);
             font-size: 1.2rem;
-            margin-right: 15px;
+            margin: 0;
         }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero-section h1 {
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .llmp-section {
+                padding: 60px 0;
+            }
+            .llmp-section h2 {
                 font-size: 2.2rem;
             }
-            
-            .hero-section {
-                padding: 80px 0;
+            .founder-section {
+                margin-top: 50px;
+            }
+        }
+        @media (max-width: 768px) {
+            .program-component {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+            }
+            .icon-holder {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .llmp-section h2 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            body {
+                padding: 10px;
+            }
+            .llmp-section {
+                padding: 40px 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <!-- Board/Leadership Section -->
+    <section id="board" class="board-section mb-5">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-hospital-alt me-2"></i>Saja General Hospital
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#doctors">Doctors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary ms-2" href="#appointment">Book Appointment</a>
-                    </li>
-                </ul>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">Board Members</h2>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>Excellence in Healthcare</h1>
-            <p>Saja General Hospital provides world-class medical care with compassion and innovation. Our dedicated team of healthcare professionals is committed to your well-being.</p>
-            <div class="mt-4">
-                <a href="#appointment" class="btn btn-light btn-lg me-3">Book an Appointment</a>
-                <a href="#services" class="btn btn-outline-light btn-lg">Our Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Our Medical Services</h2>
-                <p class="lead">Comprehensive healthcare services for all your medical needs</p>
-            </div>
-            
-            <div class="row g-4">
+            <div class="row">
+                <!-- Sample Board Members -->
                 <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="service-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h4>Cardiology</h4>
-                        <p>Advanced cardiac care with state-of-the-art diagnostic and treatment facilities.</p>
-                        <a href="#" class="text-decoration-none">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="admin-member">
+                        <img src="images/yitbarek1.jpg" alt="Chairman" class="admin-photo">
+                        <h4>Dr. Yitbarek Alemu</h4>
+                        <p class="text-muted">Chairman & Founder</p>
+                        <p>With years of experience in hospital management and healthcare innovation.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="service-icon">
-                            <i class="fas fa-baby"></i>
-                        </div>
-                        <h4>Pediatrics</h4>
-                        <p>Specialized care for infants, children, and adolescents in a child-friendly environment.</p>
-                        <a href="#" class="text-decoration-none">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="admin-member">
+                        <img src="images/zinaw.jpg" alt="CCO" class="admin-photo">
+                        <h4>Dr. Zinaw Sisay</h4>
+                        <p class="text-muted">Chief Clinical Officer</p>
+                        <p>MD, Pediatrician.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="service-icon">
-                            <i class="fas fa-bone"></i>
-                        </div>
-                        <h4>Orthopedics</h4>
-                        <p>Expert treatment for bone, joint, and muscle conditions with advanced surgical options.</p>
-                        <a href="#" class="text-decoration-none">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4>Neurology</h4>
-                        <p>Comprehensive care for disorders of the nervous system with cutting-edge technology.</p>
-                        <a href="#" class="text-decoration-none">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="service-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h4>Ophthalmology</h4>
-                        <p>Advanced eye care services including cataract surgery and laser treatments.</p>
-                        <a href="#" class="text-decoration-none">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="service-icon">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <h4>Emergency Care</h4>
-                        <p>24/7 emergency services with a dedicated team ready for any medical crisis.</p>
-                        <a href="#" class="text-decoration-none">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="admin-member">
+                        <img src="images/habte.jpg" alt="HR Director" class="admin-photo">
+                        <h4>Habtamu Zewde</h4>
+                        <p class="text-muted">Human Resources Director</p>
+                        <p>HR specialist focused on talent development and creating a supportive work environment.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Doctors Section -->
-    <section id="doctors" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Meet Our Specialists</h2>
-                <p class="lead">Our team of experienced medical professionals</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card doctor-card">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top doctor-img" alt="Dr. Sarah Johnson">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Sarah Johnson</h5>
-                            <p class="text-muted">Chief of Cardiology</p>
-                            <p class="card-text">15+ years of experience in cardiovascular diseases.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card doctor-card">
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top doctor-img" alt="Dr. Michael Chen">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Michael Chen</h5>
-                            <p class="text-muted">Head of Neurology</p>
-                            <p class="card-text">Specialized in neurodegenerative disorders.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card doctor-card">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top doctor-img" alt="Dr. Aisha Rahman">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Aisha Rahman</h5>
-                            <p class="text-muted">Pediatric Specialist</p>
-                            <p class="card-text">Expert in child healthcare and development.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card doctor-card">
-                        <img src="https://images.unsplash.com/photo-1594824947933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top doctor-img" alt="Dr. Robert Martinez">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Robert Martinez</h5>
-                            <p class="text-muted">Orthopedic Surgeon</p>
-                            <p class="card-text">Specialized in joint replacement surgeries.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary">View All Doctors</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appointment Section -->
-    <section id="appointment" class="py-5 bg-primary text-white">
+    <!-- LLMP Section -->
+    <section id="llmp" class="llmp-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h2 class="display-6 fw-bold">Book an Appointment</h2>
-                    <p class="lead">Schedule your visit with our specialists today. We're here to help you with your healthcare needs.</p>
+                <!-- Left Column: Title and Program Components -->
+                <div class="col-lg-6">
+                    <h2>
+                        <i class="fas fa-leaf" style="color: #10b981; margin-right: 10px;"></i>
+                        Longevity & Lifestyle Medicine Program (LLMP)
+                    </h2>
+                    <p class="lead">Center for Healthy Aging & Lifestyle Medicine</p>
+                    <!-- Program Component 1 -->
+                    <div class="program-component">
+                        <div class="icon-holder icon-holder-primary">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="program-content">
+                            <h5>Personalized Preventive Care</h5>
+                            <p>Tailored health plans based on individual risk factors and genetics.</p>
+                        </div>
+                    </div>
+                    <!-- Program Component 2 -->
+                    <div class="program-component">
+                        <div class="icon-holder icon-holder-accent1">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="program-content">
+                            <h5>Community & Patient Education</h5>
+                            <p>Workshops and resources for healthy living and disease prevention.</p>
+                        </div>
+                    </div>
+                    <!-- Program Component 3 -->
+                    <div class="program-component">
+                        <div class="icon-holder icon-holder-accent2">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="program-content">
+                            <h5>Lifestyle-Based Disease Reversal</h5>
+                            <p>Evidence-based approaches to reverse chronic conditions through lifestyle changes.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 text-md-end">
-                    <a href="#" class="btn btn-light btn-lg">Book Now</a>
+                <!-- Right Column: Founder Section -->
+                <div class="col-lg-6">
+                    <div class="founder-section">
+                        <img src="images/yitbarek1.jpg"
+                            alt="Program Founder" class="founder-photo">
+                        <div class="founder-info">
+                            <p class="founder-name">Dr. Yitbarek Alemu, MD.</p>
+                            <p class="founder-title">Program Founder & Director</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-5 bg-light">
+    <!-- News Section - UPDATED WITH ICONS -->
+    <section id="news" class="news-section mb-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Patient Stories</h2>
-                <p class="lead">What our patients say about their experience</p>
+                <h2 class="display-5 fw-bold">Hospital News & Updates</h2>
+                <p class="lead">Stay informed about our latest developments and health initiatives</p>
             </div>
-            
             <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p>"The care I received at Saja General Hospital was exceptional. The doctors took time to explain everything and made me feel comfortable throughout my treatment."</p>
-                        <h5>James Wilson</h5>
-                        <p class="text-muted">Cardiology Patient</p>
+                <div class="col-md-6">
+                    <div class="news-card">
+                        <div class="news-icon inauguration">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="news-content">
+                            <h5>Inauguration of Saja General Hospital</h5>
+                            <p class="text-muted">October 2025</p>
+                            <p>We are proud to announce the inauguration of Saja General Hospital, upgrading our facilities to better serve the community with enhanced medical services and state-of-the-art equipment.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p>"From the emergency room to recovery, the staff was professional and compassionate. I'm grateful for the excellent medical care I received."</p>
-                        <h5>Maria Gonzalez</h5>
-                        <p class="text-muted">Orthopedics Patient</p>
+                <div class="col-md-6">
+                    <div class="news-card">
+                        <div class="news-icon blood-donation">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="news-content">
+                            <h5>Blood Donation Campaign in September</h5>
+                            <p class="text-muted">September 2025</p>
+                            <p>Join our blood donation campaign to help save lives. The campaign will run throughout September with special events and incentives for donors.</p>
+                            <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p>"The pediatric team was wonderful with my daughter. They made her feel at ease during her stay, and the facilities are top-notch."</p>
-                        <h5>Ahmed Al-Mansoori</h5>
-                        <p class="text-muted">Parent of Pediatric Patient</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section - UPDATED WITH BEAUTIFUL LAYOUT -->
+    <section class="schedule-section mb-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Follow-up Clinic Schedules</h2>
+                <p class="lead">Regular clinic hours for specialized consultations</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="schedule-content ms-3">
+                            <h5>Pediatrics Clinic</h5>
+                            <p class="text-muted">Monday, Wednesday, Friday – 8am to 12pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="schedule-content ms-3">
+                            <h5>Internal Medicine Clinic</h5>
+                            <p class="text-muted">Tuesday, Thursday – 9am to 1pm</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -379,84 +386,13 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="text-center py-4" style="background:#f1f5f9; color:#64748b;">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h4><i class="fas fa-hospital-alt me-2"></i>Saja General Hospital</h4>
-                    <p>Providing exceptional healthcare services with compassion and innovation since 1985.</p>
-                    <div class="social-icons mt-3">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-md-2 mb-4">
-                    <h5>Quick Links</h5>
-                    <div class="footer-links">
-                        <a href="#">Home</a>
-                        <a href="#services">Services</a>
-                        <a href="#doctors">Doctors</a>
-                        <a href="#about">About Us</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 mb-4">
-                    <h5>Our Services</h5>
-                    <div class="footer-links">
-                        <a href="#">Cardiology</a>
-                        <a href="#">Pediatrics</a>
-                        <a href="#">Orthopedics</a>
-                        <a href="#">Neurology</a>
-                        <a href="#">Emergency Care</a>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 mb-4">
-                    <h5>Contact Info</h5>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Medical Avenue, City, State 12345</p>
-                    <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@sajahospital.com</p>
-                    <p><i class="fas fa-clock me-2"></i> Open 24/7</p>
-                </div>
-            </div>
-            
-            <hr class="mt-4 mb-3">
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2023 Saja General Hospital. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-light me-3">Privacy Policy</a>
-                    <a href="#" class="text-light">Terms of Use</a>
-                </div>
-            </div>
+            &copy; 2025 Saja General Hospital. All rights reserved.
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
